@@ -4,13 +4,13 @@ SwiftUI 中，支持自定义截图的 View
 
 
 
-### 功能图示
+## 🌄 功能图示
 
 ![shot_995](Resources/example.png)
 
 
 
-### 使用说明
+## 💻 使用说明
 
 > 也可以直接使用 Example 工程进行查看
 
@@ -47,6 +47,6 @@ shotting.toggle()
 
 
 
-### 使用 Swift Package Manager 引入工程
+## 🛠 使用 Swift Package Manager 引入工程
 
 通过 Xcode `File > Swift Packages > Add Pacage Dependency...`，再输入 `https://github.com/RickeyBoy/ScreenshotableView` 搜索添加即可

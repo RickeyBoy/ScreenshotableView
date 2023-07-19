@@ -14,8 +14,7 @@
 		965160DB2A67C17C00B18DD1 /* ScreenshotableViewExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965160DA2A67C17C00B18DD1 /* ScreenshotableViewExampleTests.swift */; };
 		965160E52A67C17C00B18DD1 /* ScreenshotableViewExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965160E42A67C17C00B18DD1 /* ScreenshotableViewExampleUITests.swift */; };
 		965160E72A67C17C00B18DD1 /* ScreenshotableViewExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965160E62A67C17C00B18DD1 /* ScreenshotableViewExampleUITestsLaunchTests.swift */; };
-		965160F42A67C3F200B18DD1 /* ScreenshotableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965160F32A67C3F200B18DD1 /* ScreenshotableView.swift */; };
-		965160F82A67C4CB00B18DD1 /* ScreenshotableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965160F72A67C4CB00B18DD1 /* ScreenshotableViewExtensions.swift */; };
+		965160FC2A67D27A00B18DD1 /* ScreenshotableView in Frameworks */ = {isa = PBXBuildFile; productRef = 965160FB2A67D27A00B18DD1 /* ScreenshotableView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +45,7 @@
 		965160E02A67C17C00B18DD1 /* ScreenshotableViewExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenshotableViewExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		965160E42A67C17C00B18DD1 /* ScreenshotableViewExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotableViewExampleUITests.swift; sourceTree = "<group>"; };
 		965160E62A67C17C00B18DD1 /* ScreenshotableViewExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotableViewExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		965160F32A67C3F200B18DD1 /* ScreenshotableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotableView.swift; sourceTree = "<group>"; };
-		965160F72A67C4CB00B18DD1 /* ScreenshotableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotableViewExtensions.swift; sourceTree = "<group>"; };
+		965160F92A67D1B900B18DD1 /* ScreenshotableView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ScreenshotableView; path = ../../ScreenshotableView; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965160FC2A67D27A00B18DD1 /* ScreenshotableView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +81,7 @@
 				965160D92A67C17C00B18DD1 /* ScreenshotableViewExampleTests */,
 				965160E32A67C17C00B18DD1 /* ScreenshotableViewExampleUITests */,
 				965160C72A67C17B00B18DD1 /* Products */,
+				965160FA2A67D27A00B18DD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,10 +98,9 @@
 		965160C82A67C17B00B18DD1 /* ScreenshotableViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				965160F92A67D1B900B18DD1 /* ScreenshotableView */,
 				965160C92A67C17B00B18DD1 /* ScreenshotableViewExampleApp.swift */,
 				965160CB2A67C17B00B18DD1 /* ContentView.swift */,
-				965160F32A67C3F200B18DD1 /* ScreenshotableView.swift */,
-				965160F72A67C4CB00B18DD1 /* ScreenshotableViewExtensions.swift */,
 				965160CD2A67C17B00B18DD1 /* Assets.xcassets */,
 				965160CF2A67C17B00B18DD1 /* Preview Content */,
 			);
@@ -133,6 +132,13 @@
 			path = ScreenshotableViewExampleUITests;
 			sourceTree = "<group>";
 		};
+		965160FA2A67D27A00B18DD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +155,9 @@
 			dependencies = (
 			);
 			name = ScreenshotableViewExample;
+			packageProductDependencies = (
+				965160FB2A67D27A00B18DD1 /* ScreenshotableView */,
+			);
 			productName = ScreenshotableViewExample;
 			productReference = 965160C62A67C17B00B18DD1 /* ScreenshotableViewExample.app */;
 			productType = "com.apple.product-type.application";
@@ -264,8 +273,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				965160CC2A67C17B00B18DD1 /* ContentView.swift in Sources */,
-				965160F42A67C3F200B18DD1 /* ScreenshotableView.swift in Sources */,
-				965160F82A67C4CB00B18DD1 /* ScreenshotableViewExtensions.swift in Sources */,
 				965160CA2A67C17B00B18DD1 /* ScreenshotableViewExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +445,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +475,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -596,6 +605,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		965160FB2A67D27A00B18DD1 /* ScreenshotableView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ScreenshotableView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 965160BE2A67C17B00B18DD1 /* Project object */;
 }

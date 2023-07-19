@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import ScreenshotableView
 
 struct ContentView: View {
     @State var shotting = false
     @State var screenshot: Image? = nil
     
-    @State var forgroundColorOfScreenShot: Color = .white
+    @State var forgroundColorOfScreenShot: Color = .black
     @State var backgroundColorOfScreenShot: Color = .green
     @State var radiusOfScreenShot: CGFloat = 10
     
@@ -32,7 +33,7 @@ struct ContentView: View {
                     Slider(value: $radiusOfScreenShot, in: 0...20, step: 1)
                 }
             }
-            .padding([.leading, .trailing])
+            .padding([.leading, .trailing], 50)
             
             Button("Generate Screenshot") {
                 shotting.toggle()
@@ -57,13 +58,15 @@ struct ContentView: View {
                 .font(.title)
         }
         .frame(height: 60)
-        .foregroundStyle(style == .inView ? .white : forgroundColorOfScreenShot)
+        .foregroundColor(style == .inView ? .white : forgroundColorOfScreenShot)
         .padding()
-        .background(style == .inView ? .cyan : backgroundColorOfScreenShot)
+        .background(style == .inView ? .blue : backgroundColorOfScreenShot)
         .cornerRadius(style == .inView ? 4 : radiusOfScreenShot)
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

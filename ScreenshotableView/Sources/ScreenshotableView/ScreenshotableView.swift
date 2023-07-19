@@ -2,7 +2,7 @@
 //  ScreenshotableView.swift
 //  ScreenshotableViewExample
 //
-//  Created by Wang Timo on 2023/7/19.
+//  Created by Rickey on 2023/7/19.
 //
 
 import SwiftUI

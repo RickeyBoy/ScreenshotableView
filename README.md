@@ -33,7 +33,7 @@ ScreenshotableViewStyle 一共有两种样式，分别是 inView 和 inScreensho
 @ViewBuilder
 func Content(style: ScreenshotableViewStyle) -> some View {
     content // 视图内容
-  			// 可以根据 style 调整截图时的样式
+  		// 可以根据 style 调整截图时的样式
         // 比如这里正常展示时圆角为 4，截图时圆角为 10
         .cornerRadius(style == .inView ? 4 : 10)
 }

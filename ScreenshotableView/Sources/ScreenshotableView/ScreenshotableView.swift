@@ -8,10 +8,13 @@
 import SwiftUI
 import UIKit
 
-// 需要注意，inView 和 inSnapshot 的 frame 要一样
 public enum ScreenshotableViewStyle {
-    case inSnapshot /// 截图中的样式
-    case inView /// 展现在 View 中的样式
+    /// 截图中的样式
+    /// style in screenshot image
+    case inScreenshot
+    /// 正常展现的样式
+    /// style in normally displayed View
+    case inView
 }
 
 public struct ScreenshotableView<Content: View>: View {
@@ -33,14 +36,16 @@ public struct ScreenshotableView<Content: View>: View {
                 DispatchQueue.main.async {
                     shotting = false
                     // 截图时用 inSnapshot 的样式
-                    let screenshot = self.content(.inSnapshot).takeScreenshot(frame: frame, afterScreenUpdates: true)
+                    // Use content with '.inScreenshot' style while taking a screenshot
+                    let screenshot = self.content(.inScreenshot).takeScreenshot(frame: frame, afterScreenUpdates: true)
                     self.completed(screenshot)
                 }
             }
             return Color.clear
         }
         
-        // 展示 inView 的样式
+        // 展示 inView style 的内容
+        // Display content with 'inView' style
         return content(.inView).background(GeometryReader(content: internalView(proxy:)))
     }
 }

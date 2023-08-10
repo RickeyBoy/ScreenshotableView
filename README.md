@@ -1,45 +1,47 @@
 # ScreenshotableView
 
-SwiftUI 中，支持自定义截图的 View
+A View in SwiftUI that supports custom screenshot functionality.
+
+[中文说明](README_CN.md)
 
 
 
-## 🌄 功能图示
+## 🌄 Functionality Preview
 
-![shot_995](Resources/example.png)
+![examples_en](Resources/examples_en.png)
 
 
 
-## 💻 使用说明
+## 💻 Usage Instructions
 
-> 也可以直接使用 Example 工程进行查看
+> You can also directly use the Example project for reference.
 
-1. 直接使用提供截图功能的 View
+1. Directly use the provided View with screenshot:
 
 ```swift
 ScreenshotableView(shotting: $shotting) { screenshot in
-    // 返回 screenshot 截图
+    // Return the screenshot image
 } content: { style in
-    // 设置 View 内容
+    // Set the View content
     Content(style: style)
 }
 ```
 
-2. 自定义 View 内容
+2. Customize the View content:
 
-ScreenshotableViewStyle 一共有两种样式，分别是 inView 和 inScreenshot。可以根据 style，设置正常展示时、截图时不同的 UI 样式。
+There are two styles for ScreenshotableViewStyle: `inView` and `inScreenshot`. You can adjust the UI style for normal display and when taking a screenshot based on the style.
 
 ```swift
 @ViewBuilder
 func Content(style: ScreenshotableViewStyle) -> some View {
-    content // 视图内容
-  		// 可以根据 style 调整截图时的样式
-        // 比如这里正常展示时圆角为 4，截图时圆角为 10
+    content // View content
+        // Adjust the corner radius based on the style
+        // For example, here the corner radius is 4 for normal display and 10 for screenshots
         .cornerRadius(style == .inView ? 4 : 10)
 }
 ```
 
-3. 需要截图时调用
+3. Call when you need to take a screenshot:
 
 ```swift
 shotting.toggle()
@@ -47,6 +49,6 @@ shotting.toggle()
 
 
 
-## 🛠 使用 Swift Package Manager 引入工程
+## 🛠 Adding to Your Project Using Swift Package Manager
 
-通过 Xcode `File > Swift Packages > Add Pacage Dependency...`，再输入 `https://github.com/RickeyBoy/ScreenshotableView` 搜索添加即可
+In Xcode, go to `File > Swift Packages > Add Package Dependency...`, then enter `https://github.com/RickeyBoy/ScreenshotableView` to search and add it.

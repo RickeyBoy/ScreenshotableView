@@ -15,6 +15,10 @@
 		965160E52A67C17C00B18DD1 /* ScreenshotableViewExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965160E42A67C17C00B18DD1 /* ScreenshotableViewExampleUITests.swift */; };
 		965160E72A67C17C00B18DD1 /* ScreenshotableViewExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965160E62A67C17C00B18DD1 /* ScreenshotableViewExampleUITestsLaunchTests.swift */; };
 		965160FF2A67E7F800B18DD1 /* ScreenshotableView in Frameworks */ = {isa = PBXBuildFile; productRef = 965160FE2A67E7F800B18DD1 /* ScreenshotableView */; };
+		96CADB2C2BFCA6CB0074A874 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CADB2B2BFCA6CB0074A874 /* ShareSheetView.swift */; };
+		96CADB2E2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CADB2D2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift */; };
+		96CADB302BFCAB630074A874 /* SimpleUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CADB2F2BFCAB630074A874 /* SimpleUseView.swift */; };
+		96CADB322BFCAB7B0074A874 /* ShareScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CADB312BFCAB7B0074A874 /* ShareScreenshotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		965160E02A67C17C00B18DD1 /* ScreenshotableViewExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenshotableViewExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		965160E42A67C17C00B18DD1 /* ScreenshotableViewExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotableViewExampleUITests.swift; sourceTree = "<group>"; };
 		965160E62A67C17C00B18DD1 /* ScreenshotableViewExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotableViewExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		96CADB2B2BFCA6CB0074A874 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
+		96CADB2D2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppotSaveAndShareViewModifier.swift; sourceTree = "<group>"; };
+		96CADB2F2BFCAB630074A874 /* SimpleUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleUseView.swift; sourceTree = "<group>"; };
+		96CADB312BFCAB7B0074A874 /* ShareScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareScreenshotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,9 @@
 			children = (
 				965160C92A67C17B00B18DD1 /* ScreenshotableViewExampleApp.swift */,
 				965160CB2A67C17B00B18DD1 /* ContentView.swift */,
+				96CADB2F2BFCAB630074A874 /* SimpleUseView.swift */,
+				96CADB312BFCAB7B0074A874 /* ShareScreenshotView.swift */,
+				96CADB2A2BFCA6AB0074A874 /* Share */,
 				965160CD2A67C17B00B18DD1 /* Assets.xcassets */,
 				965160CF2A67C17B00B18DD1 /* Preview Content */,
 			);
@@ -135,6 +146,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96CADB2A2BFCA6AB0074A874 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				96CADB2B2BFCA6CB0074A874 /* ShareSheetView.swift */,
+				96CADB2D2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift */,
+			);
+			path = Share;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				965160CC2A67C17B00B18DD1 /* ContentView.swift in Sources */,
+				96CADB2E2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift in Sources */,
+				96CADB322BFCAB7B0074A874 /* ShareScreenshotView.swift in Sources */,
+				96CADB302BFCAB630074A874 /* SimpleUseView.swift in Sources */,
+				96CADB2C2BFCA6CB0074A874 /* ShareSheetView.swift in Sources */,
 				965160CA2A67C17B00B18DD1 /* ScreenshotableViewExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -41,7 +41,7 @@ struct SimpleUseView: View {
             
             if let screenshot {
                 VStack(spacing: 20) {
-                    Text("snapshot result:")
+                    Text("screenshot result:")
                     screenshot
                         .frame(height: 60)
                 }

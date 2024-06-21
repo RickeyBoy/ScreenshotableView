@@ -8,23 +8,11 @@
 import SwiftUI
 
 extension UIView {
-    func takeScreenshot() -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.isOpaque, UIScreen.main.scale)
-        self.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let capturedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        return capturedImage
-    }
-    
     func takeScreenshot(afterScreenUpdates: Bool) -> UIImage {
-        if !self.responds(to: #selector(drawHierarchy(in:afterScreenUpdates:))) {
-            return self.takeScreenshot()
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { _ in
+            drawHierarchy(in: bounds, afterScreenUpdates: true)
         }
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.isOpaque, UIScreen.main.scale)
-        self.drawHierarchy(in: self.bounds, afterScreenUpdates: afterScreenUpdates)
-        let snapshot = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return snapshot!
     }
 }
 
@@ -33,7 +21,19 @@ extension View {
         let hosting = UIHostingController(rootView: self)
         hosting.overrideUserInterfaceStyle = UIApplication.shared.currentUIWindow()?.overrideUserInterfaceStyle ?? .unspecified
         hosting.view.frame = frame
+        hosting.view.backgroundColor = .yellow
         return hosting.view.takeScreenshot(afterScreenUpdates: afterScreenUpdates)
+    }
+}
+
+extension UIHostingController {
+    func ignoreSafeArea() {
+        if #available(iOS 16.4, *) {
+            self.safeAreaRegions = []
+        } else {
+            let currentSafeAreaInset = UIApplication.shared.currentUIWindow()?.safeAreaInsets ?? .zero
+            self.additionalSafeAreaInsets = currentSafeAreaInset.reversed()
+        }
     }
 }
 
@@ -48,6 +48,12 @@ extension UIApplication {
             .first { $0.isKeyWindow }
 
         return window
+    }
+}
+
+extension UIEdgeInsets {
+    func reversed() -> UIEdgeInsets {
+        return UIEdgeInsets(top: -top, left: -left, bottom: -bottom, right: -right)
     }
 }
 

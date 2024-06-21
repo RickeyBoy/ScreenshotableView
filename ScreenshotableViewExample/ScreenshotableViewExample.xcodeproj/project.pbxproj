@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,11 +14,12 @@
 		965160DB2A67C17C00B18DD1 /* ScreenshotableViewExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965160DA2A67C17C00B18DD1 /* ScreenshotableViewExampleTests.swift */; };
 		965160E52A67C17C00B18DD1 /* ScreenshotableViewExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965160E42A67C17C00B18DD1 /* ScreenshotableViewExampleUITests.swift */; };
 		965160E72A67C17C00B18DD1 /* ScreenshotableViewExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965160E62A67C17C00B18DD1 /* ScreenshotableViewExampleUITestsLaunchTests.swift */; };
-		965160FF2A67E7F800B18DD1 /* ScreenshotableView in Frameworks */ = {isa = PBXBuildFile; productRef = 965160FE2A67E7F800B18DD1 /* ScreenshotableView */; };
+		96A33B532C22B4C500A72D16 /* ScrollScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A33B522C22B4C500A72D16 /* ScrollScreenshotView.swift */; };
 		96CADB2C2BFCA6CB0074A874 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CADB2B2BFCA6CB0074A874 /* ShareSheetView.swift */; };
 		96CADB2E2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CADB2D2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift */; };
 		96CADB302BFCAB630074A874 /* SimpleUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CADB2F2BFCAB630074A874 /* SimpleUseView.swift */; };
 		96CADB322BFCAB7B0074A874 /* ShareScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CADB312BFCAB7B0074A874 /* ShareScreenshotView.swift */; };
+		96F08E7F2C22D010009E030E /* ScreenshotableView in Frameworks */ = {isa = PBXBuildFile; productRef = 96F08E7E2C22D010009E030E /* ScreenshotableView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		965160E02A67C17C00B18DD1 /* ScreenshotableViewExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenshotableViewExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		965160E42A67C17C00B18DD1 /* ScreenshotableViewExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotableViewExampleUITests.swift; sourceTree = "<group>"; };
 		965160E62A67C17C00B18DD1 /* ScreenshotableViewExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotableViewExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		96A33B522C22B4C500A72D16 /* ScrollScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollScreenshotView.swift; sourceTree = "<group>"; };
 		96CADB2B2BFCA6CB0074A874 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
 		96CADB2D2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppotSaveAndShareViewModifier.swift; sourceTree = "<group>"; };
 		96CADB2F2BFCAB630074A874 /* SimpleUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleUseView.swift; sourceTree = "<group>"; };
@@ -60,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				965160FF2A67E7F800B18DD1 /* ScreenshotableView in Frameworks */,
+				96F08E7F2C22D010009E030E /* ScreenshotableView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +111,7 @@
 				965160CB2A67C17B00B18DD1 /* ContentView.swift */,
 				96CADB2F2BFCAB630074A874 /* SimpleUseView.swift */,
 				96CADB312BFCAB7B0074A874 /* ShareScreenshotView.swift */,
+				96A33B522C22B4C500A72D16 /* ScrollScreenshotView.swift */,
 				96CADB2A2BFCA6AB0074A874 /* Share */,
 				965160CD2A67C17B00B18DD1 /* Assets.xcassets */,
 				965160CF2A67C17B00B18DD1 /* Preview Content */,
@@ -174,7 +177,7 @@
 			);
 			name = ScreenshotableViewExample;
 			packageProductDependencies = (
-				965160FE2A67E7F800B18DD1 /* ScreenshotableView */,
+				96F08E7E2C22D010009E030E /* ScreenshotableView */,
 			);
 			productName = ScreenshotableViewExample;
 			productReference = 965160C62A67C17B00B18DD1 /* ScreenshotableViewExample.app */;
@@ -249,7 +252,7 @@
 			);
 			mainGroup = 965160BD2A67C17B00B18DD1;
 			packageReferences = (
-				965160FD2A67E7F800B18DD1 /* XCRemoteSwiftPackageReference "ScreenshotableView" */,
+				96F08E7D2C22D010009E030E /* XCLocalSwiftPackageReference ".." */,
 			);
 			productRefGroup = 965160C72A67C17B00B18DD1 /* Products */;
 			projectDirPath = "";
@@ -297,6 +300,7 @@
 				96CADB2E2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift in Sources */,
 				96CADB322BFCAB7B0074A874 /* ShareScreenshotView.swift in Sources */,
 				96CADB302BFCAB630074A874 /* SimpleUseView.swift in Sources */,
+				96A33B532C22B4C500A72D16 /* ScrollScreenshotView.swift in Sources */,
 				96CADB2C2BFCA6CB0074A874 /* ShareSheetView.swift in Sources */,
 				965160CA2A67C17B00B18DD1 /* ScreenshotableViewExampleApp.swift in Sources */,
 			);
@@ -631,21 +635,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		965160FD2A67E7F800B18DD1 /* XCRemoteSwiftPackageReference "ScreenshotableView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RickeyBoy/ScreenshotableView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		96F08E7D2C22D010009E030E /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		965160FE2A67E7F800B18DD1 /* ScreenshotableView */ = {
+		96F08E7E2C22D010009E030E /* ScreenshotableView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 965160FD2A67E7F800B18DD1 /* XCRemoteSwiftPackageReference "ScreenshotableView" */;
 			productName = ScreenshotableView;
 		};
 /* End XCSwiftPackageProductDependency section */

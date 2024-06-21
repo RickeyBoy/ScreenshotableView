@@ -36,6 +36,18 @@ struct ContentView: View {
                     }
                 }
                 Spacer()
+                NavigationLink(destination: ScrollScreenshotView()) {
+                    VStack {
+                        Image(systemName: "scroll")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 20)
+                            .padding()
+                        Text("Screenshot For ScrollView")
+                            .font(.headline)
+                    }
+                }
+                Spacer()
             }
             .padding()
             .navigationBarTitle("Screenshot!")

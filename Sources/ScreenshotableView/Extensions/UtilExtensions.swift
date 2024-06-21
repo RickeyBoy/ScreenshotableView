@@ -1,30 +1,10 @@
 //
-//  ScreenshotableViewExtensions.swift
-//  ScreenshotableViewExample
+//  UtilExtensions.swift
 //
 //  Created by Rickey on 2023/7/19.
 //
 
 import SwiftUI
-
-extension UIView {
-    func takeScreenshot(afterScreenUpdates: Bool) -> UIImage {
-        let renderer = UIGraphicsImageRenderer(bounds: bounds)
-        return renderer.image { _ in
-            drawHierarchy(in: bounds, afterScreenUpdates: true)
-        }
-    }
-}
-
-extension View {
-    func takeScreenshot(frame:CGRect, afterScreenUpdates: Bool) -> UIImage {
-        let hosting = UIHostingController(rootView: self)
-        hosting.overrideUserInterfaceStyle = UIApplication.shared.currentUIWindow()?.overrideUserInterfaceStyle ?? .unspecified
-        hosting.view.frame = frame
-        hosting.view.backgroundColor = .yellow
-        return hosting.view.takeScreenshot(afterScreenUpdates: afterScreenUpdates)
-    }
-}
 
 extension UIHostingController {
     func ignoreSafeArea() {

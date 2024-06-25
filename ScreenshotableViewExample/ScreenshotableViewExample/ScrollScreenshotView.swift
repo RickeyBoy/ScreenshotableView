@@ -5,8 +5,8 @@
 //  Created by Wang Timo on 2024/6/19.
 //
 
-import SwiftUI
 import ScreenshotableView
+import SwiftUI
 
 /// 生成随机颜色
 /// generate random color
@@ -18,12 +18,14 @@ extension Color {
     }
 }
 
+// MARK: - ScrollScreenshotView
+
 struct ScrollScreenshotView: View {
     @State var shotting = false
     @State var screenshot: Image? = nil
-    
+
     let colors = generateRandomColors()
-    
+
     var body: some View {
         VStack(spacing: 40) {
             if let screenshot {
@@ -34,10 +36,12 @@ struct ScrollScreenshotView: View {
                     .frame(height: 400)
             } else {
                 Text("Scrollview ↓")
-                ScreenshotableContent()
-                    .frame(height: 400)
+                ScrollView {
+                    ScreenshotableContent()
+                }
+                .frame(height: 400)
             }
-            
+
             Button("Generate Screenshot") {
                 shotting.toggle()
             }
@@ -46,11 +50,11 @@ struct ScrollScreenshotView: View {
             }
         }
     }
-    
+
     private func ScreenshotableContent() -> some View {
         ScreenshotableScrollView(shotting: $shotting) { screenshot in
             self.screenshot = Image(uiImage: screenshot)
-        } content: { style in
+        } content: { _ in
             VStack {
                 ForEach(0..<colors.count, id: \.self) { index in
                     Rectangle()
@@ -64,7 +68,7 @@ struct ScrollScreenshotView: View {
             .padding()
         }
     }
-    
+
     static func generateRandomColors(count: Int = 10) -> [Color] {
         return (0..<count).map { _ in Color.random }
     }

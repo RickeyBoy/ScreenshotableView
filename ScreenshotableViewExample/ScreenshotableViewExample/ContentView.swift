@@ -10,46 +10,37 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            VStack() {
-                Spacer()
-                NavigationLink(destination: ImageShotView()) {
-                    VStack {
-                        Image(systemName: "lightbulb")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20)
-                            .padding()
-                        Text("Simple Use")
-                            .font(.headline)
-                    }
-                }
-                Spacer()
-                NavigationLink(destination: ShareScreenshotView()) {
-                    VStack {
-                        Image(systemName: "square.and.arrow.up")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20)
-                            .padding()
-                        Text("Share Screenshot")
-                            .font(.headline)
-                    }
-                }
-                Spacer()
-                NavigationLink(destination: ScrollScreenshotView()) {
-                    VStack {
-                        Image(systemName: "scroll")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20)
-                            .padding()
-                        Text("Screenshot For ScrollView")
-                            .font(.headline)
-                    }
-                }
-                Spacer()
+            VStack(alignment: .leading, spacing: 20) {
+                NavigationButton(
+                    destination: AnyView(SimpleUseView()),
+                    imageName: "pencil.and.outline",
+                    title: "Basic use",
+                    description: "Basic use of the component with customization."
+                )
+                
+                NavigationButton(
+                    destination: AnyView(ImageShotView()),
+                    imageName: "photo.on.rectangle",
+                    title: "Image with QR code",
+                    description: "Capture an image and merge QR codes and logos."
+                )
+                
+                NavigationButton(
+                    destination: AnyView(ScrollScreenshotView()),
+                    imageName: "scroll",
+                    title: "Use with ScrollView",
+                    description: "Capture full content of a scroll view."
+                )
+                
+                NavigationButton(
+                    destination: AnyView(ShareScreenshotView()),
+                    imageName: "square.and.arrow.up",
+                    title: "Screenshot then share",
+                    description: "Integrate screenshot with share button."
+                )
             }
             .padding()
+            .padding(.bottom)
             .navigationBarTitle("Screenshot!")
         }
     }

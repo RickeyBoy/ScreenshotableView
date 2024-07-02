@@ -21,28 +21,24 @@ extension Color {
 struct ScrollScreenshotView: View {
     @State var shotting = false
     @State var screenshot: Image? = nil
+    @State var showResult = false
     
     let colors = generateRandomColors()
     
     var body: some View {
-        VStack(spacing: 40) {
-            if let screenshot {
-                Text("Screenshot result ↓")
-                screenshot
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 400)
-            } else {
-                Text("Scrollview ↓")
-                ScreenshotableContent()
-                    .frame(height: 400)
-            }
+        VStack {
+            Text("Scrollview ↓")
+            ScreenshotableContent()
             
             Button("Generate Screenshot") {
                 shotting.toggle()
+                showResult.toggle()
             }
-            Button("Clear Screenshot") {
-                screenshot = nil
+            .padding()
+        }
+        .sheet(isPresented: $showResult) {
+            if let screenshot {
+                ImagePreView(image: screenshot, isPresented: $showResult)
             }
         }
     }

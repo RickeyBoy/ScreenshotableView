@@ -11,6 +11,7 @@ import ScreenshotableView
 struct SimpleUseView: View {
     @State var shotting = false
     @State var screenshot: Image? = nil
+    @State var showResult = false
     
     @State var forgroundColorOfScreenShot: Color = .black
     @State var backgroundColorOfScreenShot: Color = .green
@@ -37,14 +38,12 @@ struct SimpleUseView: View {
             
             Button("Generate Screenshot") {
                 shotting.toggle()
+                showResult.toggle()
             }
-            
+        }
+        .sheet(isPresented: $showResult) {
             if let screenshot {
-                VStack(spacing: 20) {
-                    Text("screenshot result:")
-                    screenshot
-                        .frame(height: 60)
-                }
+                ImagePreView(image: screenshot, isPresented: $showResult)
             }
         }
     }

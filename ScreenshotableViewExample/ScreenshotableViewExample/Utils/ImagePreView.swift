@@ -27,12 +27,15 @@ struct ImagePreView: View {
             
             Spacer()
             
+            Text("snapshot result:")
             image
                 .resizable()
                 .scaledToFit()
             
             Spacer()
         }
+        .background(Color.init(hex: "#EEEEEE"))
+        .ignoresSafeArea()
     }
 }
 

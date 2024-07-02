@@ -10,7 +10,7 @@ import SwiftUI
 extension UIView {
     func takeScreenshot(afterScreenUpdates: Bool) -> UIImage {
         let renderer = UIGraphicsImageRenderer(bounds: bounds)
-        return renderer.image { _ in
+        return renderer.image { context in
             drawHierarchy(in: bounds, afterScreenUpdates: true)
         }
     }

@@ -19,6 +19,9 @@
 		96CADB2E2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CADB2D2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift */; };
 		96CADB302BFCAB630074A874 /* SimpleUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CADB2F2BFCAB630074A874 /* SimpleUseView.swift */; };
 		96CADB322BFCAB7B0074A874 /* ShareScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CADB312BFCAB7B0074A874 /* ShareScreenshotView.swift */; };
+		96EF3B182C2EB7D60084725B /* ImageShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF3B172C2EB7D60084725B /* ImageShotView.swift */; };
+		96EF3B1B2C2EB9490084725B /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF3B1A2C2EB9490084725B /* ColorExtension.swift */; };
+		96EF3B1D2C2EBFA00084725B /* ImagePreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF3B1C2C2EBFA00084725B /* ImagePreView.swift */; };
 		96F08E7F2C22D010009E030E /* ScreenshotableView in Frameworks */ = {isa = PBXBuildFile; productRef = 96F08E7E2C22D010009E030E /* ScreenshotableView */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,9 @@
 		96CADB2D2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppotSaveAndShareViewModifier.swift; sourceTree = "<group>"; };
 		96CADB2F2BFCAB630074A874 /* SimpleUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleUseView.swift; sourceTree = "<group>"; };
 		96CADB312BFCAB7B0074A874 /* ShareScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareScreenshotView.swift; sourceTree = "<group>"; };
+		96EF3B172C2EB7D60084725B /* ImageShotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageShotView.swift; sourceTree = "<group>"; };
+		96EF3B1A2C2EB9490084725B /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		96EF3B1C2C2EBFA00084725B /* ImagePreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +115,12 @@
 			children = (
 				965160C92A67C17B00B18DD1 /* ScreenshotableViewExampleApp.swift */,
 				965160CB2A67C17B00B18DD1 /* ContentView.swift */,
+				96EF3B172C2EB7D60084725B /* ImageShotView.swift */,
 				96CADB2F2BFCAB630074A874 /* SimpleUseView.swift */,
 				96CADB312BFCAB7B0074A874 /* ShareScreenshotView.swift */,
 				96A33B522C22B4C500A72D16 /* ScrollScreenshotView.swift */,
 				96CADB2A2BFCA6AB0074A874 /* Share */,
+				96EF3B192C2EB93B0084725B /* Utils */,
 				965160CD2A67C17B00B18DD1 /* Assets.xcassets */,
 				965160CF2A67C17B00B18DD1 /* Preview Content */,
 			);
@@ -158,6 +166,15 @@
 				96CADB2D2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift */,
 			);
 			path = Share;
+			sourceTree = "<group>";
+		};
+		96EF3B192C2EB93B0084725B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				96EF3B1A2C2EB9490084725B /* ColorExtension.swift */,
+				96EF3B1C2C2EBFA00084725B /* ImagePreView.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,10 +315,13 @@
 			files = (
 				965160CC2A67C17B00B18DD1 /* ContentView.swift in Sources */,
 				96CADB2E2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift in Sources */,
+				96EF3B182C2EB7D60084725B /* ImageShotView.swift in Sources */,
+				96EF3B1B2C2EB9490084725B /* ColorExtension.swift in Sources */,
 				96CADB322BFCAB7B0074A874 /* ShareScreenshotView.swift in Sources */,
 				96CADB302BFCAB630074A874 /* SimpleUseView.swift in Sources */,
 				96A33B532C22B4C500A72D16 /* ScrollScreenshotView.swift in Sources */,
 				96CADB2C2BFCA6CB0074A874 /* ShareSheetView.swift in Sources */,
+				96EF3B1D2C2EBFA00084725B /* ImagePreView.swift in Sources */,
 				965160CA2A67C17B00B18DD1 /* ScreenshotableViewExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

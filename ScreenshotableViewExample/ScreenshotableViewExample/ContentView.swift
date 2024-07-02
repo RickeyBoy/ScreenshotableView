@@ -12,7 +12,7 @@ struct ContentView: View {
         NavigationView {
             VStack() {
                 Spacer()
-                NavigationLink(destination: SimpleUseView()) {
+                NavigationLink(destination: ImageShotView()) {
                     VStack {
                         Image(systemName: "lightbulb")
                             .resizable()

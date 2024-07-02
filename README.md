@@ -8,7 +8,9 @@ A View in SwiftUI that supports custom screenshot functionality.
 
 ## 🌄 Functionality Preview
 
-![examples_en](Resources/examples_en.png)
+![](Resources/fullexamples.png)
+
+Download example project and try it!!
 
 
 
@@ -16,13 +18,26 @@ A View in SwiftUI that supports custom screenshot functionality.
 
 > You can also directly use the Example project for reference.
 
-1. Directly use the provided View with screenshot:
+1. Screenshot
+
+Directly use the provided `ScreenshotableView` with screenshot:
 
 ```swift
 ScreenshotableView(shotting: $shotting) { screenshot in
     // Return the screenshot image
 } content: { style in
     // Set the View content
+    Content(style: style)
+}
+```
+
+Also supports capturing all content within a ScrollView as a long image, by using `ScreenshotableScrollView`.
+
+```swift
+ScreenshotableScrollView(shotting: $shotting) { screenshot in
+    // Return the screenshot image
+} content: { style in
+    // No need to nest ScrollView for the content within ScrollView
     Content(style: style)
 }
 ```

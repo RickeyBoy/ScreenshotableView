@@ -6,7 +6,9 @@ SwiftUI 中，支持自定义截图的 View
 
 ## 🌄 功能图示
 
-![shot_995](Resources/example.png)
+![](Resources/fullexamples.png)
+
+可以下载 Example 工程来体验
 
 
 
@@ -14,13 +16,26 @@ SwiftUI 中，支持自定义截图的 View
 
 > 也可以直接使用 Example 工程进行查看
 
-1. 直接使用提供截图功能的 View
+1. 截图
+
+直接使用提供截图功能的 `ScreenshotableView`
 
 ```swift
 ScreenshotableView(shotting: $shotting) { screenshot in
     // 返回 screenshot 截图
 } content: { style in
     // 设置 View 内容
+    Content(style: style)
+}
+```
+
+也支持将 ScrollView 中的所有内容截取为长图，通过使用 `ScreenshotableScrollView`
+
+```swift
+ScreenshotableScrollView(shotting: $shotting) { screenshot in
+    // 返回 screenshot 截图
+} content: { style in
+    // ScrollView 中的内容，无需再嵌套 ScrollView
     Content(style: style)
 }
 ```

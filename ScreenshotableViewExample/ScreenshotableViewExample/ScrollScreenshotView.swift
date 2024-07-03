@@ -2,7 +2,7 @@
 //  ScrollScreenshotView.swift
 //  ScreenshotableViewExample
 //
-//  Created by Wang Timo on 2024/6/19.
+//  Created by Rickey on 2024/6/19.
 //
 
 import SwiftUI

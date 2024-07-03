@@ -2,7 +2,7 @@
 //  NavigationButton.swift
 //  ScreenshotableViewExample
 //
-//  Created by Wang Timo on 2024/7/2.
+//  Created by Rickey on 2024/7/2.
 //
 
 import SwiftUI

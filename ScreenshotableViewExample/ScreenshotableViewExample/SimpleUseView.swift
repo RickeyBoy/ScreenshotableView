@@ -2,7 +2,7 @@
 //  SimpleUseView.swift
 //  ScreenshotableViewExample
 //
-//  Created by Wang Timo on 2024/5/21.
+//  Created by Rickey on 2024/5/21.
 //
 
 import SwiftUI

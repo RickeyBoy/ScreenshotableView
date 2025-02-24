@@ -12,7 +12,7 @@ struct ContentView: View {
         NavigationView {
             VStack(alignment: .leading, spacing: 20) {
                 NavigationButton(
-                    destination: AnyView(SimpleUseView()),
+                    destination: AnyView(UIViewRepresentableScreenshotView()),
                     imageName: "pencil.and.outline",
                     title: "Basic use",
                     description: "Basic use of the component with customization."

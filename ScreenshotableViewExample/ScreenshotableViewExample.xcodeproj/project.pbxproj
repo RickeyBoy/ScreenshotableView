@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960649762C758A5900C0F4B4 /* UIViewRepresentableScreenshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960649752C758A5900C0F4B4 /* UIViewRepresentableScreenshotView.swift */; };
 		965160CA2A67C17B00B18DD1 /* ScreenshotableViewExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965160C92A67C17B00B18DD1 /* ScreenshotableViewExampleApp.swift */; };
 		965160CC2A67C17B00B18DD1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965160CB2A67C17B00B18DD1 /* ContentView.swift */; };
 		965160CE2A67C17B00B18DD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 965160CD2A67C17B00B18DD1 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		960649752C758A5900C0F4B4 /* UIViewRepresentableScreenshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRepresentableScreenshotView.swift; sourceTree = "<group>"; };
 		965160C62A67C17B00B18DD1 /* ScreenshotableViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenshotableViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		965160C92A67C17B00B18DD1 /* ScreenshotableViewExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotableViewExampleApp.swift; sourceTree = "<group>"; };
 		965160CB2A67C17B00B18DD1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				96CADB2F2BFCAB630074A874 /* SimpleUseView.swift */,
 				96CADB312BFCAB7B0074A874 /* ShareScreenshotView.swift */,
 				96A33B522C22B4C500A72D16 /* ScrollScreenshotView.swift */,
+				960649752C758A5900C0F4B4 /* UIViewRepresentableScreenshotView.swift */,
 				96CADB2A2BFCA6AB0074A874 /* Share */,
 				96EF3B192C2EB93B0084725B /* Utils */,
 				965160CD2A67C17B00B18DD1 /* Assets.xcassets */,
@@ -316,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				960649762C758A5900C0F4B4 /* UIViewRepresentableScreenshotView.swift in Sources */,
 				965160CC2A67C17B00B18DD1 /* ContentView.swift in Sources */,
 				96CADB2E2BFCA6EC0074A874 /* SuppotSaveAndShareViewModifier.swift in Sources */,
 				96EF3B182C2EB7D60084725B /* ImageShotView.swift in Sources */,
